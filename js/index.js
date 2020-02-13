@@ -40,3 +40,79 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//images//
+let headerImage = document.getElementById('cta-img');
+headerImage.setAttribute('src', siteContent['cta']['img-src']);
+
+let midImage = document.getElementById('middle-img');
+midImage.setAttribute('src', siteContent ['main-content']['middle-img-src']);
+
+
+//nav//
+let navigation = document.getElementsByTagName('a');
+Array.from(navigation).forEach((item, index) =>{
+  item.textContent = siteContent['nav'][`nav-item-${(index += 1)}`]
+});
+
+//logo text//
+let logoText = document.querySelectorAll('.cta-text h1')[0];
+logoText.textContent = siteContent['cta']['h1'];
+
+//button//
+let button = document.querySelectorAll('.cta-text button')[0];
+button.textContent = siteContent['cta']['button'];
+
+//main content//
+let featureTitle = document.querySelectorAll('.main-content .top-content .text-content h4')[0];
+featureTitle.textContent = siteContent['main-content']['features-h4'];
+
+let featureParagraph = document.querySelectorAll('.main-content .top-content .text-content p')[0];
+featureParagraph.textContent = siteContent['main-content']['features-content'];
+
+let aboutTitle = document.querySelectorAll('.main-content .top-content .text-content h4')[1];
+aboutTitle.textContent = siteContent['main-content']['about-h4'];
+
+let aboutParagraph = document.querySelectorAll('.main-content .top-content .text-content p')[1];
+aboutParagraph.textContent = siteContent['main-content']['about-content'];
+
+let serviceTitle = document.querySelectorAll('.main-content .bottom-content .text-content h4')[0];
+serviceTitle.textContent = siteContent['main-content']['services-h4'];
+
+let serviceParagraph = document.querySelectorAll('.main-content .bottom-content .text-content p')[0];
+serviceParagraph.textContent = siteContent['main-content']['services-content'];
+
+let productTitle = document.querySelectorAll('.main-content .bottom-content .text-content h4')[1];
+productTitle.textContent = siteContent['main-content']['product-h4'];
+
+let productParagraph = document.querySelectorAll('.main-content .bottom-content .text-content p')[1];
+productParagraph.textContent = siteContent['main-content']['product-content'];
+
+let visionTitle = document.querySelectorAll('.main-content .bottom-content .text-content h4')[2];
+visionTitle.textContent = siteContent['main-content']['vision-h4'];
+
+let visionParagraph = document.querySelectorAll('.main-content .bottom-content .text-content p')[2];
+visionParagraph.textContent = siteContent['main-content']['vision-content'];
+
+
+//contact//
+let contactTitle = document.querySelectorAll('.contact h4')[0];
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+
+let address = document.querySelectorAll('.contact p')[0];
+address.textContent = siteContent['contact']['address'];
+
+let phone = document.querySelectorAll('.contact p')[1];
+phone.textContent = siteContent['contact']['phone'];
+
+let email = document.querySelectorAll('.contact p')[2];
+email.textContent = siteContent['contact']['email'];
+
+
+//footer//
+let footerTitle = document.querySelectorAll('footer p')[0];
+footerTitle.textContent = siteContent['footer']['copyright'];
+
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018"
+// },
