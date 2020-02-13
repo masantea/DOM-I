@@ -113,6 +113,26 @@ email.textContent = siteContent['contact']['email'];
 let footerTitle = document.querySelectorAll('footer p')[0];
 footerTitle.textContent = siteContent['footer']['copyright'];
 
-// "footer": {
-//   "copyright" : "Copyright Great Idea! 2018"
-// },
+
+//change navigation to green//
+let greenNav = document.querySelectorAll('a');
+greenNav.forEach((item =>{
+  item.style.color = "green";
+}));
+
+//create elements on nav//
+
+//item 1//
+let newNav1 = document.createElement('a');
+newNav1.textContent = 'Home';
+
+let newItem1 = document.querySelector('nav');
+newItem1.prepend(newNav1);
+
+//item2//
+
+let newNav2 = document.createElement('a');
+newNav2.textContent = 'Testimonials';
+
+let newItem2 = document.querySelector('nav');
+newItem2.appendChild(newNav2);
